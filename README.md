@@ -1,21 +1,19 @@
-# iris-analytics-template
-This is a template for InterSystems IRIS Analytics (DeepSee) solutions.
-The template contains a very basic example of the BI solution which contains one source class, data, one cube, two pivots and one dashboard.
+# xdatareports
+This is an application to print reports for your InterSystems IRIS Persistent Classes.
 
 ## Installation 
 
 ### ZPM
 It's packaged with ZPM so it could be installed as:
 ```
-zpm "install iris-analytics-sample"
+zpm "install xdatareports"
 ```
-then open http://localhost:32791/dsw/index.html#/IRISAPP
 
 ### Docker
 The repo is dockerised so you can  clone/git pull the repo into any local directory
 
 ```
-$ git clone https://github.com/intersystems-community/iris-analytics-template.git
+$ git clone https://github.com/yurimarx/xdatareports.git
 ```
 
 Open the terminal in this directory and run:
@@ -23,10 +21,6 @@ Open the terminal in this directory and run:
 ```
 $ docker-compose up -d
 ```
-and open then http://localhost:32791/dsw/index.html#/IRISAPP
-
-Or, open the cloned folder in VSCode, start docker-compose and open the URL via VSCode menu:
-<img width="799" alt="Screenshot 2020-11-15 at 20 17 12" src="https://user-images.githubusercontent.com/2781759/99191744-ba02af00-277f-11eb-8568-e43aa9a0029c.png">
 
 
 ## How to start coding
