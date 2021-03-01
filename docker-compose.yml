@@ -1,12 +1,8 @@
 version: '3.6'
 services:
-  reportserver:
-    build:
-      context: reportserver
-      dockerfile: Dockerfile
   iris:
     build: 
-      context: iris
+      context: .
       dockerfile: Dockerfile
     restart: always
     ports: 

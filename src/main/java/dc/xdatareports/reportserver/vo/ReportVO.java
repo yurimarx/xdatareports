@@ -1,5 +1,6 @@
 package dc.xdatareports.reportserver.vo;
 
+import java.sql.Connection;
 import java.util.ArrayList;
 import java.util.List;
 
@@ -9,6 +10,7 @@ public class ReportVO<T> {
 	private String query;
 	private List<ReportColumnVO> columns = new ArrayList<ReportColumnVO>();
 	private List<T> data;
+	private Connection connection;
 	
 	public String getTitle() {
 		return title;
@@ -38,4 +40,13 @@ public class ReportVO<T> {
 	public void setData(List<T> data) {
 		this.data = data;
 	}
+	
+	public Connection getConnection() {
+		return connection;
+	}
+	
+	public void setConnection(Connection connection) {
+		this.connection = connection;
+	}
+	
 }

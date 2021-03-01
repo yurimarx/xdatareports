@@ -16,7 +16,6 @@ import dc.xdatareports.reportserver.vo.ReportVO;
 import net.sf.dynamicreports.jasper.builder.JasperReportBuilder;
 import net.sf.dynamicreports.report.builder.style.StyleBuilder;
 import net.sf.dynamicreports.report.constant.HorizontalTextAlignment;
-import net.sf.jasperreports.engine.data.JRBeanCollectionDataSource;
 
 
 public class ReportGenerator<T> {
@@ -30,7 +29,7 @@ public class ReportGenerator<T> {
 										.highlightDetailEvenRows()
 										.title(Templates.createVisumTitleComponent(reportVO.getTitle()))
 										.pageFooter(cmp.pageXofY().setStyle(boldCenteredStyle))
-										.setDataSource(new JRBeanCollectionDataSource(reportVO.getData()));
+										.setDataSource(reportVO.getQuery(), reportVO.getConnection());
 										
 		for(ReportColumnVO column:reportVO.getColumns()) {
 			report.addColumn(col.column(column.getTitle(), column.getField(), type.stringType()));
